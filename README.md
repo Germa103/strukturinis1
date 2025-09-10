@@ -1,4 +1,4 @@
 # strukturinis1
 Sveiki
 
-Siandien treciadienis
+Siandien yra treciadienis
