@@ -1,0 +1,3 @@
+# strukturinis1
+Sveiki
+
