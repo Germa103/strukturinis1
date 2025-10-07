@@ -7,7 +7,9 @@ int main() {
     const double INR_Bendras = 104.6918, INR_Pirkti = 101.3862, INR_Parduoti = 107.8546;
 
     int pasirinkimas, valiuta;
-    double kiekis, rezultatas;
+    double kiekis, rezultatas = 0;
+    do
+    {
         cout << fixed << setprecision(2);
 
         cout << "\nVALIUTOS KEITYKLA \n";
@@ -18,7 +20,12 @@ int main() {
         cout <<" Iveskite pasirinkima: ";
         cin >> pasirinkimas;
 
-        cout << "\nPasirinkite valiuta \n";
+        if (pasirinkimas == 4) {
+            cout << "Programa baigta" << endl;
+            return 0;
+        }
+
+        cout << "\nPASIRINKITE VALIUTA \n";
         cout << "1 - USD \n";
         cout << "2 - GBP \n";
         cout << "3 - INR \n";
@@ -51,6 +58,27 @@ int main() {
                 cout << "Gausite " << rezultatas << " pasirinktos valiutos" << endl;
                 break;
         }
+        case 3: {
+                cout << "Iveskite pasirinktos valiutos kieki";
+                cin >> kiekis;
+                if (valiuta == 1)
+                    rezultatas = kiekis * USD_Parduoti;
+                else if (valiuta == 2)
+                    rezultatas = kiekis * GBP_Parduoti;
+                else if (valiuta == 3)
+                    rezultatas = kiekis * INR_Parduoti;
+                else
+                    cout << "Tokio valiutos pasirinkimo nera" << endl;
+                cout << "Pardavus " << kiekis << " pasirinktos valiutos gausite " << rezultatas << " EUR" << endl;
+                break;
         }
+        case 4: {
+                cout << "Programa baigta" << endl;
+                break;
+        }
+        default:
+            cout << "Tokio pasirinkimo nera" << endl;
+        }
+    } while (pasirinkimas != 4);
 return 0;
 }
