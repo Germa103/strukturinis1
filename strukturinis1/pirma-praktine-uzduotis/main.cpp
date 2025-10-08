@@ -62,11 +62,11 @@ int main() {
                 cout << "Iveskite pasirinktos valiutos kieki";
                 cin >> kiekis;
                 if (valiuta == 1)
-                    rezultatas = kiekis * USD_Parduoti;
+                    rezultatas = kiekis / USD_Parduoti;
                 else if (valiuta == 2)
-                    rezultatas = kiekis * GBP_Parduoti;
+                    rezultatas = kiekis / GBP_Parduoti;
                 else if (valiuta == 3)
-                    rezultatas = kiekis * INR_Parduoti;
+                    rezultatas = kiekis / INR_Parduoti;
                 else
                     cout << "Tokio valiutos pasirinkimo nera" << endl;
                 cout << "Pardavus " << kiekis << " pasirinktos valiutos gausite " << rezultatas << " EUR" << endl;
