@@ -29,7 +29,7 @@ int main()
                 }
                 cout << "Iveskite naujo mokinio varda (max 100 mokiniu): ";
                 cin >> vardai[mokiniuKiekis];
-                cout << "Pazymiu kiekis (max 10): ";
+                cout << "Pazymiu kiekis (max "<< max_pazymiai << "): ";
                 cin >> pazymiuKiekis[mokiniuKiekis];
                 if (pazymiuKiekis[mokiniuKiekis] > max_pazymiai)
                     pazymiuKiekis[mokiniuKiekis] = max_pazymiai;
