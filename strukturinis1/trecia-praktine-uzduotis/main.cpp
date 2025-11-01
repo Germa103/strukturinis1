@@ -12,7 +12,7 @@ int main() {
         cout <<"\nDuomenu apdorojimo sistema\n";
         cout <<"1 - Bilietu pardavimu suma\n";
         cout <<"2 - Atlyginimu atnaujinimas\n";
-        cout <<"0 - Iseiti is sistemos\n";
+        cout <<"0 - Baigti\n";
         cin >> pasirinkimas;
         switch (pasirinkimas) {
             case 1: {
@@ -77,8 +77,12 @@ int main() {
                 atnaujintiAtlyginimai.close();
                 break;
             }
+            case 0: {
+                cout << "Programa baigta." << endl;
+                break;
+            }
             default:
-                cout << "Tokio pasirinkimo nera" << endl;
+                cout << "Tokio pasirinkimo nera." << endl;
                 break;
         }        
     } while (pasirinkimas!=0);     
